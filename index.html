@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Per Te, Nei Tuoi Momenti ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Apri quando sei... ✨</h1>
+        <p class="subtitle">Scegli come ti senti in questo momento, ho qualcosa per te.</p>
+        
+        <div class="grid-bottoni">
+            <!-- Se vuoi aggiungere altri umori, copia una riga qui sotto e cambia il data-file -->
+            <button class="btn-umore" data-file="felice.txt"> Felice</button>
+            <button class="btn-umore" data-file="triste.txt"> Triste</button>
+            <button class="btn-umore" data-file="stanca.txt"> Stanca</button>
+            <button class="btn-umore" data-file="nostalgia.txt"> Nostalgica</button>
+            <button class="btn-umore" data-file="affamata.txt"> Affamata</button>
+            <button class="btn-umore" data-file="arrabbiata.txt"> Arrabbiata</button>
+            <button class="btn-umore" data-file="ti-manco.txt"> Ti manco</button>
+            <button class="btn-umore" data-file="delusa.txt"> Delusa</button>
+            <button class="btn-umore" data-file="depressa.txt"> Depressa</button>
+            <button class="btn-umore" data-file="insicura.txt"> Insicura</button>
+            <button class="btn-umore" data-file="non-all-altezza.txt"> Non all'altezza</button>
+            <button class="btn-umore" data-file="non-compresa.txt"> Non compresa</button>
+            <button class="btn-umore" data-file="realizzata.txt"> Realizzata</button>
+            <button class="btn-umore" data-file="sola.txt"> Sola</button>
+            <button class="btn-umore" data-file="stupida.txt"> Stupida</button>
+            <button class="btn-umore" data-file="nervosa.txt"> Nervosa</button>
+
+        </div>
+    </div>
+
+    <!-- Finestra Pop-up (Modale) nascosta che appare al click -->
+    <div id="modal-lettera" class="modal nascosto">
+        <div class="modal-contenuto">
+            <span class="chiudi-modal">&times;</span>
+            <div id="testo-lettera">Caricamento...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
