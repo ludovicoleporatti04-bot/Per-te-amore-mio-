@@ -31,6 +31,13 @@ h1 {
     margin-bottom: 30px;
 }
 
+.ps-amore {
+    font-size: 0.85rem;
+    margin-top: -20px;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
 .grid-bottoni {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -95,4 +102,62 @@ h1 {
 
 .chiudi-modal:hover {
     color: #ff477e;
+}
+
+/* ==========================================================================
+   NUOVI STILI: SCHERMATA DI BENVENUTO (Aggiunti per la musica di sottofondo)
+   ========================================================================== */
+#schermata-benvenuto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffe5ec, #ffc2d1); /* Stesso sfondo del sito per continuità */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Superiore al pop-up per coprire tutto all'avvio */
+    transition: opacity 0.8s ease; /* Transizione fluida quando svanisce */
+}
+
+.contenuto-benvenuto {
+    text-align: center;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 71, 126, 0.15);
+    max-width: 85%;
+    width: 400px;
+}
+
+.contenuto-benvenuto h1 {
+    color: #ff477e;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.contenuto-benvenuto p {
+    color: #6a6a6a;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+#btn-entra {
+    background-color: #ff7096;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px; /* Più arrotondato per distinguerlo dagli altri bottoni */
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 112, 150, 0.4);
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+#btn-entra:hover {
+    background-color: #ff477e;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(255, 71, 126, 0.5);
 }
