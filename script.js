@@ -1,5 +1,15 @@
 document.querySelectorAll('.btn-umore').forEach(bottone => {
     bottone.addEventListener('click', function() {
+        // --- MUSICA DI SOTTOFONDO ---
+        // Fa partire la musica al primo click su un bottone
+        const audio = document.getElementById('musica-sottofondo');
+        if (audio) {
+            audio.play().catch(error => {
+                console.log("Riproduzione audio bloccata dal browser:", error);
+            });
+        }
+        // ----------------------------
+
         const nomeFile = this.getAttribute('data-file');
         // Percorso relativo corretto per GitHub Pages (senza / iniziale)
         const percorsoFile = 'lettere/' + nomeFile;
