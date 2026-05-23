@@ -1,15 +1,33 @@
-document.querySelectorAll('.btn-umore').forEach(bottone => {
-    bottone.addEventListener('click', function() {
-        // --- MUSICA DI SOTTOFONDO ---
-        // Fa partire la musica al primo click su un bottone
-        const audio = document.getElementById('musica-sottofondo');
-        if (audio) {
-            audio.play().catch(error => {
+// --- LOGICA PER LA SCHERMATA DI BENVENUTO E LA MUSICA ---
+const schermataBenvenuto = document.getElementById('schermata-benvenuto');
+const btnEntra = document.getElementById('btn-entra');
+const musicaSottofondo = document.getElementById('musica-sottofondo');
+
+// Gestiamo il click sul bottone di benvenuto
+if (btnEntra) {
+    btnEntra.addEventListener('click', function() {
+        // 1. Fa partire la canzone "musica.mp3"
+        if (musicaSottofondo) {
+            musicaSottofondo.play().catch(error => {
                 console.log("Riproduzione audio bloccata dal browser:", error);
             });
         }
-        // ----------------------------
 
+        // 2. Fa sfumare la schermata iniziale portando l'opacità a 0
+        if (schermataBenvenuto) {
+            schermataBenvenuto.style.opacity = '0';
+            
+            // 3. Rimuove completamente il blocco dopo 0.8 secondi (il tempo della sfumatura)
+            setTimeout(() => {
+                schermataBenvenuto.style.display = 'none';
+            }, 800); 
+        }
+    });
+}
+
+// --- LOGICA PER I BOTTONI DEGLI UMORI (LE LETTERINE) ---
+document.querySelectorAll('.btn-umore').forEach(bottone => {
+    bottone.addEventListener('click', function() {
         const nomeFile = this.getAttribute('data-file');
         // Percorso relativo corretto per GitHub Pages (senza / iniziale)
         const percorsoFile = 'lettere/' + nomeFile;
